@@ -35,6 +35,8 @@ Because FocusFlow is a pure frontend application, getting it running is instant.
     cd focusflow
 3. Run the app:
 Simply double-click index.html to open it in your default web browser, or use an extension like VS Code's "Live Server" for hot-reloading.
+
+
 📁 File Structurefocusflow/
 ```
 ├── index.html       # Main application layout and UI structure
