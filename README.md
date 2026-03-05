@@ -30,7 +30,7 @@ Because FocusFlow is a pure frontend application, getting it running is instant.
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/yourusername/focusflow.git](https://github.com/pxrkerxd/focusflow.git)
+   git clone https://github.com/pxrkerxd/focusflow.git
 2. Navigate to the directory:
     cd focusflow
 3. Run the app:
