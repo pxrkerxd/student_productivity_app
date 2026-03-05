@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusFlow | Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+
+    <div class="dashboard">
+        <aside class="sidebar glass-panel">
+            <div class="logo">
+                <span class="logo-icon">⚡</span>
+                <h2>FocusFlow</h2>
+            </div>
+            
+            <div class="stats-container">
+                <div class="stat-card rank-card">
+                    <p class="stat-label">Current Tier</p>
+                    <h3 id="current-rank" class="rank-text rank-iron">Unranked</h3>
+                    
+                    <div class="xp-container">
+                        <div class="xp-bar-bg">
+                            <div id="xp-bar-fill" class="xp-bar-fill"></div>
+                        </div>
+                        <p id="xp-text" class="xp-text">0 / 500 XP</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <p class="stat-label">Current Streak</p>
+                    <h3 id="streak-count" class="gradient-text">🔥 0 Days</h3>
+                </div>
+                <div class="stat-card">
+                    <p class="stat-label">Today's Focus</p>
+                    <h3 id="today-minutes">⏱️ 0 Mins</h3>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <section class="glass-panel timer-section">
+                <div class="subject-manager">
+                    <div class="select-group">
+                        <select id="subject-input" class="modern-input"></select>
+                        <button id="delete-subject-btn" class="icon-btn delete-btn" title="Delete Selected Subject">🗑️</button>
+                    </div>
+                    <div class="add-group">
+                        <input type="text" id="new-subject-input" class="modern-input" placeholder="Add new subject...">
+                        <button id="add-subject-btn" class="icon-btn add-btn" title="Add Subject">➕</button>
+                    </div>
+                </div>
+                
+                <div class="mode-tabs">
+                    <button id="mode-timer" class="tab-btn active">Timer</button>
+                    <button id="mode-stopwatch" class="tab-btn">Stopwatch</button>
+                </div>
+
+                <div id="custom-time-wrapper" class="custom-time-wrapper">
+                    <input type="number" id="custom-minutes" value="25" min="1" max="180" class="modern-input time-input">
+                    <span>mins</span>
+                </div>
+                
+                <div class="timer-display-wrapper">
+                    <h1 id="timer-display">25:00</h1>
+                </div>
+                
+                <div class="controls">
+                    <button id="start-btn" class="btn primary-btn">Start Focus</button>
+                    <button id="secondary-btn" class="btn secondary-btn">Reset</button>
+                </div>
+            </section>
+
+            <section class="glass-panel heatmap-section">
+                <div class="section-header">
+                    <h3>Activity Heatmap</h3>
+                    <span class="subtitle">Your 365-day journey</span>
+                </div>
+                <div id="heatmap" class="heatmap-grid"></div> 
+            </section>
+
+            <section class="glass-panel chart-section">
+                <div class="section-header">
+                    <h3>Subject Analytics</h3>
+                    <span class="subtitle">Time distribution across subjects</span>
+                </div>
+                <div class="chart-container">
+                    <canvas id="subject-chart"></canvas>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
