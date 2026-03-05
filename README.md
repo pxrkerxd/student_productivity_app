@@ -36,10 +36,12 @@ Because FocusFlow is a pure frontend application, getting it running is instant.
 3. Run the app:
 Simply double-click index.html to open it in your default web browser, or use an extension like VS Code's "Live Server" for hot-reloading.
 📁 File Structurefocusflow/
+```
 ├── index.html       # Main application layout and UI structure
 ├── style.css        # Glassmorphism styling, animations, and responsive design
 ├── script.js        # Core logic, gamification engine, and LocalStorage management
 └── README.md        # Project documentation
+```
 🧠 Why I Built This
 Balancing a demanding engineering curriculum requires serious time management. I needed a tool that didn't just passively track time, but actively motivated me to sit down and grind through complex subjects. By combining data visualization (to see my effort) with gamification (to reward my effort), FocusFlow turns daily exam prep into a game that rewards consistency.
 
